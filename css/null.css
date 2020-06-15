@@ -1,0 +1,68 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: Cambria;
+}
+body{
+    background-color: rgba(56, 48, 61, 1);
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    margin: 20px;
+    font-size: 20px;
+}
+.welcome {
+    display: flex;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.form-post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+
+.input-post {
+    display: flex;
+    align-items: center;
+    justify-content: center;"
+}
+.main-post {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    flex-direction: column;
+    border: 4px double indigo;
+    background-color: antiquewhite;
+}
+.post {
+    display: flex;
+    margin: 5px 50px;
+    padding: 5px;
+    flex-direction: column;
+    border: 4px double indigo;
+    background-color: antiquewhite;
+}
+.pictures {
+    display: flex;
+}
+.picture{
+    padding: 0px 20px;
+}
+.text{
+    padding: 10px 20px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}

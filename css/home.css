@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background-color: rgba(56, 48, 61, 1);
+    font-family: Cambria;
+}
+.welcome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.welcome h1 {
+    font-size: 50px;
+    height: 20px;
+    padding: 50px;
+}
+hr {
+    margin: 5px;
+}
+h4 {
+    padding: 10px 0px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+table, th, td {
+    border: 2px double indigo;
+}
+th {
+    height: 50px;
+}
+.block {
+    border: 4px double indigo;
+    padding: 10px;
+    margin: 20px 50px 50px 50px;
+    font-size: 19px;
+    color: black;
+    background-color: antiquewhite;
+}
+.boards-list {
+    font-size: 19px;
+    color: black;
+    background-color: antiquewhite;
+}
