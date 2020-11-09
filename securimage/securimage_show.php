@@ -51,10 +51,12 @@ require_once dirname(__FILE__) . '/securimage.php';
 
 $img = new Securimage();
 
+$img->code_length = 3;
+
 // You can customize the image by making changes below, some examples are included - remove the "//" to uncomment
 
 //$img->ttf_file        = './Quiff.ttf';
-//$img->captcha_type    = Securimage::SI_CAPTCHA_MATHEMATIC; // show a simple math problem instead of text
+$img->captcha_type    = Securimage::SI_CAPTCHA_MATHEMATIC; // show a simple math problem instead of text
 //$img->case_sensitive  = true;                              // true to use case sensitve codes - not recommended
 //$img->image_height    = 90;                                // height in pixels of the image
 //$img->image_width     = $img->image_height * M_E;          // a good formula for image size based on the height

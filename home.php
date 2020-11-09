@@ -1,8 +1,8 @@
 <html>
 <head>
     <title>Чертач</title>
-    <link id="favicon" rel="icon" href="img/favicon">
-    <link rel="stylesheet" type="text/css" href="css/home.css">
+    <link id="favicon" rel="icon" href="/img/favicon">
+    <link rel="stylesheet" type="text/css" href="/css/home.css">
     <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
     <meta name="description" content="Anonymous imageboard 'chertach'">
     <meta name="keywords" content="imageboard,anonymity">
@@ -15,7 +15,7 @@
 <div class="welcome">
     <h1>Черта.ч</h1>
     <h2>Зло пожаловать!</h2>
-    <img width="100px" height="100px" src="img/logo">
+    <img width="100px" height="100px" src="/img/mascot">
 </div>
 
 <header class="block">
@@ -41,9 +41,11 @@
         <?php
             $query = getAllBoards();
             while($boards = pg_fetch_array($query, null, PGSQL_ASSOC)) {
+                if($boards["uri"] == "fap" || $boards["uri"]=="bb") //игнорировать мутные разделы
+                    continue;
                 echo
                     "<tr>
-                        <td><a href='null.php?board=".$boards["uri"]."'>".$boards["uri"]."</a></td>
+                        <td><a href='/".$boards["uri"]."'>".$boards["uri"]."</a></td>
                         <td>".$boards["name"]."</td>
                         <td>".$boards["description"]."</td>
                     </tr>";
@@ -56,8 +58,9 @@
     <h4>Статистика:</h4>
     <hr>
     <p>Количество открытых досок на данный момент - <?php echo getBoardsCount(); ?>,
-        количество тредов за всё время - <?php echo getThreadsCount(); ?>
-        и количество оставленных анонами постов за всё время - <?php echo getPostsCount(); ?>.
+        количество тредов за всё время - <?php echo getThreadsCount(); ?>,
+        количество оставленных анонами постов за всё время - <?php echo getPostsCount(); ?>,
+        количество уникальных посетителей - <?php echo getAnonsCount() ?>.
     </p>
 </footer>
 
