@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-family: Cambria;
+}
+body{
+    background-color: rgba(56, 48, 61, 1);
+}
+h1{
+    font-size: 40px;
+}
+h2{
+    margin: 20px;
+    font-size: 20px;
+}
+.overline {
+    text-decoration: overline;
+}
+.spoiler {
+    background-color: black;
+}
+.spoiler:hover {
+    background-color: rgba(0,0,0,0);
+}
+.links{
+    background-color: #ffd874e3;
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+.welcome {
+    display: flex;
+    padding: 50px 0px 15px 0px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.welcome :visited{
+    color: red;
+}
+.welcome :link{
+    color: red;
+}
+.form-post{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+}
+.form-post :visited{
+    color: red;
+}
+.form-post :link{
+    color: red;
+}
+
+.input-post {
+    display: flex;
+    align-items: center;
+    justify-content: center;"
+}
+.main-post {
+    display: flex;
+    margin: 5px;
+    padding: 5px;
+    flex-direction: column;
+    border: 4px double indigo;
+    background-color: antiquewhite;
+}
+.post {
+    display: flex;
+    margin: 5px 50px;
+    padding: 5px;
+    flex-direction: column;
+    border: 4px double indigo;
+    background-color: antiquewhite;
+}
+.pictures {
+    display: flex;
+}
+.picture{
+    padding: 0px 20px;
+}
+.goTop {
+    position: fixed;
+    right: 15px;
+    bottom:30px;
+    border: 3px double indigo;
+    background-color: #faebd7;
+}
+.text{
+    padding: 10px 20px;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+}
+.updater {
+    display: flex;
+    background-color: #ffc374d1;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    width: 100%;
+}
+.autoupdate{
+        flex: 1;          
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+update{
+        flex: 1;          
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+.timer{
+        flex: 1;          /* shorthand for: flex-grow: 1, flex-shrink: 1, flex-basis: 0 */
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }

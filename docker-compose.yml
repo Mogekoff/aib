@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  server:
+    image: nginx:latest
+    container_name: nginx
+    restart: always
+    ports:
+      - '80:80'
+      - '443:443'
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./data:/var/www/imageboard
+    links:
+      - php
+  php:
+    image: mogekoff/php_pgsql
+    container_name: php
+    volumes:
+      - ./data:/var/www/imageboard
+  db:
+    image: postgres:latest
+    container_name: postgres
+    restart: always 
+    volumes:
+      - ./pg_data:/var/lib/postgresql/data/pg_data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_PASSWORD: ldw;qodk2
+      PGDATA: /var/lib/postgresql/data/pg_data
+
+  dbadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin
+    restart: always
+    volumes:
+      - ./pg_admin:/var/lib/pgadmin
+    ports:
+    - "5050:80"
+    - "5051:443"
+    environment:
+      PGADMIN_DEFAULT_EMAIL: mogekoff@gmail.com
+      PGADMIN_DEFAULT_PASSWORD: ldw;qodk2
+    
