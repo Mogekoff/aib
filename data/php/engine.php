@@ -6,7 +6,7 @@ const MAXFILESIZE = 16 * 1024 * 1024; //5MB
 const SHORTTEXT = 666;
 const FFMPEG = "/var/www/imageboard/bin/ffmpeg"; //ffmpeg dir
 //Database Connection
-$dbconn = pg_connect("host=host.docker.internal dbname=postgres user=postgres password=ldw;qodk2");
+$dbconn = pg_connect("host=db dbname=postgres user=postgres password=ldw;qodk2");
 //Identify anon and set cookie
 $my_id = getAnonID();
 
